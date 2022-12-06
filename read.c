@@ -14,7 +14,7 @@ int readLine(FILE *f, char **s, int *l){
     *l = i+1;
     if(i){
         return 0;
-    }else if('\n'){
+    }else if(ch=='\n'){
         return 1;
     }else{
         return 2;
@@ -48,4 +48,17 @@ int fieldN(FILE *f,char sep,int fld){
     }
     
     return n;
+}
+
+//Return 0 if all the characters are unique and 1 if not
+int repeated(char *s, int l){
+    for(int i = 0; i<l; i+=2){
+        for(int j = 0; j<l; j++){
+            if(j!=i && s[i] == s[j]){
+                return 1;
+            }
+        }
+    }
+    
+    return 0;
 }
