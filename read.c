@@ -52,7 +52,7 @@ int fieldN(FILE *f,char sep,int fld){
 
 //Return 0 if all the characters are unique and 1 if not
 int repeated(char *s, int l){
-    for(int i = 0; i<l; i+=2){
+    for(int i = 0; i<l; i++){
         for(int j = 0; j<l; j++){
             if(j!=i && s[i] == s[j]){
                 return 1;
