@@ -59,6 +59,5 @@ int repeated(char *s, int l){
             }
         }
     }
-    
     return 0;
 }
